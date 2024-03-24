@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const IncomeSchema = new mongoose.schema(
+const IncomeSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -19,7 +19,7 @@ const IncomeSchema = new mongoose.schema(
       default: 'Income',
     },
     date: {
-      type: Date,
+      type: String,
       require: true,
       trim: true,
     },
