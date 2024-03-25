@@ -1,17 +1,15 @@
 const ExpensesSchema = require('../models/expensesModule');
 exports.addExpenses = async (req, res) => {
-  const { title, amount, category, description, date } = req.body;
-  s;
+  const { title, amount, category, date } = req.body;
   const expenses = ExpensesSchema({
     title,
     amount,
     category,
-    description,
     date,
   });
 
   try {
-    if (!title || !amount || !category || !description || !date) {
+    if (!title || !amount || !category || !date) {
       return res.status(400).json({ message: 'All  fields are required' });
     }
     if (amount <= 0 || !amount === 'number') {
