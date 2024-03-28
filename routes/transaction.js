@@ -13,7 +13,7 @@ const {
   getSavings,
   deleteSavings,
 } = require('../controllers/saving');
-const { login, logout, signup } = require('../controllers/auth_controller.js');
+
 const router = require('express').Router();
 
 //incomes
@@ -30,10 +30,5 @@ router.delete('/delete-expenses/:id', deleteExpenses);
 router.post('/add-saving', addSavings);
 router.get('/get-saving', getSavings);
 router.delete('/delete-saving/:id', deleteSavings);
-
-//user
-router.post('/signup', signup);
-router.post('/login', login);
-router.post('/logout', logout);
 
 module.exports = router;
